@@ -3,7 +3,7 @@
   "site": "kontrabanda.aiathome.ru",
   "sourceVersion": "v0.9",
   "sourceArchiveSha256": "23b46cbd6dedb2567cfc86a6ed05aa2791bdca5e2195bafa2cd863f78e116fa2",
-  "contentSha256": "49f60424840ada96b5eff5fa73b8245ccd15f556f44f62e329eb202b3995b0bf",
+  "contentSha256": "a874cd56d80390bd747e2cb7fde1074874c7085c90da3d1fbcd1b3d7d70b81b1",
   "files": [
     {
       "path": "1/index.html",
@@ -37,8 +37,8 @@
     },
     {
       "path": "ai-subscriptions/index.html",
-      "bytes": 199702,
-      "sha256": "a279bbd0d94b848b0232c84d2ba56a36f484a5d857170b311d4c7259a34463a1"
+      "bytes": 199884,
+      "sha256": "d8f024ce9f5b72b30dc031f960576156b80f68d905d0918401b2a689250b280f"
     },
     {
       "path": "ai-subscriptions/models.csv",
