@@ -1,0 +1,23 @@
+﻿name,input,cache,output,blend_80_20,million_tokens_for_20,note,source_urls
+GPT-6 Astra · Standard,10,1,50,18.0,1.111111,Первая ступень контекста,https://developers.openai.com/api/docs/pricing
+GPT-6 Astra · Ultrafast,60,6,300,108.0,0.185185,"Это API-ставки, не множитель подписки",https://developers.openai.com/api/docs/pricing
+GPT-6.1 Sol,2,0.1,10,3.6,5.555556,Первая ступень контекста,https://developers.openai.com/api/docs/pricing
+GPT-6 Luna,0.1,0.01,0.5,0.18,111.111111,Первая ступень контекста,https://developers.openai.com/api/docs/pricing
+Claude Fable 5.1,10,0.25,50,18.0,1.111111,,https://platform.claude.com/docs/en/about-claude/pricing
+Claude Opus 5.5,4,0.2,20,7.2,2.777778,,https://platform.claude.com/docs/en/about-claude/pricing
+Claude Sonnet 5.5,2,0.2,10,3.6,5.555556,,https://platform.claude.com/docs/en/about-claude/pricing
+Claude Haiku 4.5,1,0.1,5,1.8,11.111111,,https://platform.claude.com/docs/en/about-claude/pricing
+Gemini 3.8 Flash,0.75,0.075,3.75,1.35,14.814815,Временная цена до 31.12.2026,https://ai.google.dev/gemini-api/docs/pricing
+Gemini 3.1 Pro Preview,2,0.2,12,4.0,5.0,Запросы ≤200 тыс. токенов,https://ai.google.dev/gemini-api/docs/pricing
+Gemini 3.5 Flash-Lite,0.3,0.03,2.5,0.74,27.027027,,https://ai.google.dev/gemini-api/docs/pricing
+Qwen3.8 Max,2,,6,2.8,7.142857,International / Singapore,https://www.alibabacloud.com/help/en/model-studio/model-pricing
+Qwen3.8 Flash,0.15,,0.47,0.214,93.457944,International / Singapore; точный алиас см. примечание,https://www.alibabacloud.com/help/en/model-studio/model-pricing
+GLM-5.3,1.4,0.26,4.4,2.0,10.0,,https://docs.z.ai/guides/overview/pricing
+GLM-5.3-Flash,0.15,0.03,0.5,0.22,90.909091,,https://docs.z.ai/guides/overview/pricing
+DeepSeek V4 Pro 0813,1.32,0.044,3.96,1.848,10.822511,"Peak, без временной скидки",https://api-docs.deepseek.com/quick_start/pricing/
+DeepSeek V4.1 Flash,0.3,0.006,1.2,0.48,41.666667,"Peak, без временной скидки",https://api-docs.deepseek.com/quick_start/pricing/
+MiniMax M3,0.3,0.06,1.2,0.48,41.666667,Контекст ≤512 тыс. токенов,https://platform.minimax.io/docs/guides/pricing-paygo
+MiniMax M2.7,0.3,0.06,1.2,0.48,41.666667,,https://platform.minimax.io/docs/guides/pricing-paygo
+Kimi K3,3,0.3,15,5.4,3.703704,"Ценовой ориентир AA, не проверенный нами checkout Kimi",https://artificialanalysis.ai/models/kimi-k3
+Grok 4.7,2,,6,2.8,7.142857,,https://docs.x.ai/developers/models
+Mistral Large,0.5,,1.5,0.7,28.571429,Модель из примера Mistral; не Medium 3.5,https://mistral.ai/pricing/

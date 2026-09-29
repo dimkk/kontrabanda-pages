@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kontrabanda.aiathome.ru/sitemap.xml

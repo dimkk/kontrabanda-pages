@@ -1,0 +1,27 @@
+﻿family,name,mode,index,cost,note,source_urls
+OpenAI,GPT-6 Astra,max,53,3.26,,https://artificialanalysis.ai/models/gpt-6-astra
+OpenAI,GPT-6.1 Sol,max,52,0.72,Новое поколение рабочего семейства,https://artificialanalysis.ai/models/gpt-6-1-sol
+OpenAI,GPT-6 Luna,max,37,0.07,Бюджетная модель,https://artificialanalysis.ai/leaderboards/models
+Anthropic,Claude Opus 5.5,max + default fallback,58,5.98,,https://artificialanalysis.ai/models/claude-opus-5-5
+Anthropic,Claude Sonnet 5.5,max + default fallback,56,7.6,"Дешевле за токен, не за это тестовое задание",https://artificialanalysis.ai/models/claude-sonnet-5-5
+Anthropic,Claude Fable 5.1,max + default fallback,53,7.63,Отдельная дорогая линейка,https://artificialanalysis.ai/leaderboards/models
+Google,Gemini 3.8 Flash,high,41,1.24,Новее представленного Pro,https://artificialanalysis.ai/models/gemini-3-8-flash
+Google,Gemini 3.1 Pro Preview,режим страницы AA,30,0.67,"Предыдущее поколение, не современный парный Pro",https://artificialanalysis.ai/leaderboards/models
+Google,Gemini 3.5 Flash-Lite,режим страницы AA,22,0.12,Бюджетная модель,https://artificialanalysis.ai/leaderboards/models
+Alibaba / Qwen,Qwen3.8 Max 0902,режим страницы AA,45,5.41,,https://artificialanalysis.ai/models/qwen3-8-max
+Alibaba / Qwen,Qwen3.8-Flash-Next,режим страницы AA,40,0.37,Не приравниваем автоматически к алиасу Token Plan,https://artificialanalysis.ai/models/qwen3-8-flash-next
+Z.ai / GLM,GLM-5.3,max,45,2.01,,https://artificialanalysis.ai/models/glm-5-3
+Z.ai / GLM,GLM-5.3-Flash,режим страницы AA,42,0.25,Младшая модель,https://artificialanalysis.ai/leaderboards/models
+DeepSeek,DeepSeek V4 Pro 0813,max,36,0.67,Предыдущее поколение относительно V4.1,https://artificialanalysis.ai/leaderboards/models
+DeepSeek,DeepSeek V4.1 Flash,max,39,0.27,Новее Pro 0813 — не чистое сравнение размера,https://artificialanalysis.ai/models/deepseek-v4-1-flash
+MiniMax,MiniMax M3,режим страницы AA,29,0.51,,https://artificialanalysis.ai/models/minimax-m3
+MiniMax,MiniMax M2.7,режим страницы AA,23,,Предшественник; текущая стоимость AA не опубликована,https://artificialanalysis.ai/models/minimax-m2-7
+Kimi,Kimi K3,max,44,2.0,,https://artificialanalysis.ai/models/kimi-k3
+Kimi,Kimi K2.7 Code,режим страницы AA,26,0.54,"Предшественник и кодовая специализация, не K3-mini",https://artificialanalysis.ai/leaderboards/models
+xAI / Grok,Grok 4.7,xhigh,46,3.74,,https://artificialanalysis.ai/models/grok-4-7
+xAI / Grok,Grok 4.7,high,46,2.73,"Та же модель, более экономный режим",https://artificialanalysis.ai/leaderboards/models
+Mistral,Mistral Medium 3.5,режим страницы AA,14,0.5,Не является измерением качества агента Vibe,https://artificialanalysis.ai/models/mistral-medium-3-5
+Mistral,Mistral Small 4,режим страницы AA,11,0.02,Младшая модель,https://artificialanalysis.ai/leaderboards/models
+Xiaomi / MiMo,MiMo-V2.6-Pro,режим страницы AA,46,0.13,Цена подписки не подтверждена; контроль качества,https://artificialanalysis.ai/models/mimo-v2-6-pro
+Xiaomi / MiMo,MiMo-V2.6-Flash,режим страницы AA,38,0.06,Цена подписки не подтверждена,https://artificialanalysis.ai/leaderboards/models
+Meta,Muse Spark 1.3,max,48,1.6,Платные уровни объявлены; сопоставимая цена не подтверждена,https://artificialanalysis.ai/leaderboards/models

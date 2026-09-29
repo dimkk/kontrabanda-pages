@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ai-subscriptions",
+    "title": "Интеллект по подписке. Токены — за скобками.",
+    "url": "https://kontrabanda.aiathome.ru/ai-subscriptions/",
+    "date": "2026-09-29",
+    "publishedAt": "2026-09-29T20:50:00Z",
+    "status": "ready",
+    "image": "/assets/social/site-og.jpg",
+    "tags": [
+      "ai",
+      "tools"
+    ]
+  },
+  {
+    "id": "kolobki",
+    "title": "Следствие ведут колобки. Вернее, OpenAI. Вернее, Transluce.",
+    "url": "https://kontrabanda.aiathome.ru/1/",
+    "date": "2026-09-28",
+    "publishedAt": "2026-09-28T07:00:00Z",
+    "status": "ready",
+    "image": "/assets/images/cover-1200.webp",
+    "tags": [
+      "ai",
+      "agents",
+      "security",
+      "tools",
+      "investigations"
+    ]
+  }
+]

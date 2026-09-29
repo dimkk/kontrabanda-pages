@@ -1,0 +1,1615 @@
+{
+  "snapshot": "2026-09-29",
+  "benchmark_version": "AA Intelligence Index v4.3.2",
+  "units": {
+    "api": "USD per 1 million tokens",
+    "benchmark_cost": "USD per Intelligence Index task; not per successful user task",
+    "scenario": "80% uncached input, 20% billable output"
+  },
+  "plans": [
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Plus",
+      "price": 20,
+      "currency": "USD",
+      "quota": "База 1×; Work/Codex: 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "GPT-6 / Sol / Luna; API оплачивается отдельно.",
+      "refs": [
+        "oai_plus",
+        "oai_usage"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "OpenAI",
+      "name": "Pro 100",
+      "price": 100,
+      "currency": "USD",
+      "quota": "Выше Plus; в таблице Work ещё фигурирует 5×",
+      "tokens": "Не раскрыты",
+      "note": "Ultrafast не включён; документация меняется.",
+      "refs": [
+        "oai_tiers",
+        "oai_usage"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "OpenAI",
+      "name": "Pro 200",
+      "price": 200,
+      "currency": "USD",
+      "quota": "Новая квота ниже прежней; точный коэффициент не подтверждён",
+      "tokens": "Не раскрыты",
+      "note": "Старые условия — до 29.10 для подходящих действующих подписчиков.",
+      "refs": [
+        "oai_tiers"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "OpenAI",
+      "name": "Pro 500",
+      "price": 500,
+      "currency": "USD",
+      "quota": "25× Plus; общий расход Work/Codex",
+      "tokens": "Не раскрыты",
+      "note": "Ultrafast доступен, но выбирается отдельно.",
+      "refs": [
+        "oai_recap",
+        "oai_tiers"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Pro",
+      "price": 20,
+      "currency": "USD",
+      "quota": "Базовый платный пул; лимиты использования",
+      "tokens": "Не раскрыты",
+      "note": "Claude + Code; $200 за год, если платить ежегодно.",
+      "refs": [
+        "claude_plans"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Max 5×",
+      "price": 100,
+      "currency": "USD",
+      "quota": "5× Pro за сессию; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "Увеличенный лимит, не безлимитный API.",
+      "refs": [
+        "claude_plans",
+        "claude_max"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Max 20×",
+      "price": 200,
+      "currency": "USD",
+      "quota": "20× Pro за сессию; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "Пять часов / неделя и отдельные ограничения моделей.",
+      "refs": [
+        "claude_max"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Google",
+      "name": "AI Plus",
+      "price": 4.99,
+      "currency": "USD",
+      "quota": "2× Free; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "Мультимодальный пакет; Flow credits — не текстовые токены.",
+      "refs": [
+        "gem_plans",
+        "gem_limits"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Google",
+      "name": "AI Pro",
+      "price": 19.99,
+      "currency": "USD",
+      "quota": "4× Free; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "Пакет Gemini; API не является этой квотой.",
+      "refs": [
+        "gem_plans",
+        "gem_limits"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Google",
+      "name": "AI Ultra 5×",
+      "price": 99.99,
+      "currency": "USD",
+      "quota": "5× Pro, не 5× Free",
+      "tokens": "Не раскрыты",
+      "note": "База сравнения отличается от Plus/Pro.",
+      "refs": [
+        "gem_plans"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Google",
+      "name": "AI Ultra 20×",
+      "price": 199.99,
+      "currency": "USD",
+      "quota": "20× Pro",
+      "tokens": "Не раскрыты",
+      "note": "Самый большой из этих четырёх пулов Gemini.",
+      "refs": [
+        "gem_plans"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Z.ai / GLM",
+      "name": "Lite",
+      "price": 18,
+      "currency": "USD",
+      "quota": "2 000 кредитов / 5 ч; 10 000 / 7 дней",
+      "tokens": "Считаются по формуле",
+      "note": "GLM-5.3 / Flash. Витрина промо: $12,60; расчёты ниже по обычной цене.",
+      "refs": [
+        "glm_plans",
+        "glm_credits"
+      ],
+      "kind": "lab",
+      "clarity": "formula"
+    },
+    {
+      "provider": "Z.ai / GLM",
+      "name": "Pro",
+      "price": 80,
+      "currency": "USD",
+      "quota": "12 000 кредитов / 5 ч; 60 000 / 7 дней",
+      "tokens": "Считаются по формуле",
+      "note": "GLM-5.3 / Flash. Витрина промо: $56; расчёты ниже по обычной цене.",
+      "refs": [
+        "glm_plans",
+        "glm_credits"
+      ],
+      "kind": "lab",
+      "clarity": "formula"
+    },
+    {
+      "provider": "Z.ai / GLM",
+      "name": "Max",
+      "price": 168,
+      "currency": "USD",
+      "quota": "28 000 кредитов / 5 ч; 140 000 / 7 дней",
+      "tokens": "Считаются по формуле",
+      "note": "GLM-5.3 / Flash. Витрина промо: $117,60; расчёты ниже по обычной цене.",
+      "refs": [
+        "glm_plans",
+        "glm_credits"
+      ],
+      "kind": "lab",
+      "clarity": "formula"
+    },
+    {
+      "provider": "Alibaba / Qwen",
+      "name": "Token Plan Lite",
+      "price": 8,
+      "currency": "USD",
+      "quota": "11 500 кредитов / 30 дней; недельный лимит снят",
+      "tokens": "Коэффициенты не раскрыты",
+      "note": "Qwen + DeepSeek + GLM. Промоценник: $6. Это не подписка Qwen Chat.",
+      "refs": [
+        "qwen_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Alibaba / Qwen",
+      "name": "Token Plan Essential",
+      "price": 16,
+      "currency": "USD",
+      "quota": "25 500 кредитов / 30 дней; недельный лимит снят",
+      "tokens": "Коэффициенты не раскрыты",
+      "note": "Qwen + DeepSeek + GLM. Промоценник: $10. Это не подписка Qwen Chat.",
+      "refs": [
+        "qwen_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Alibaba / Qwen",
+      "name": "Token Plan Standard",
+      "price": 25,
+      "currency": "USD",
+      "quota": "45 000 кредитов / 30 дней; недельный лимит снят",
+      "tokens": "Коэффициенты не раскрыты",
+      "note": "Qwen + DeepSeek + GLM. Промоценник: $18. Это не подписка Qwen Chat.",
+      "refs": [
+        "qwen_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Alibaba / Qwen",
+      "name": "Token Plan Pro",
+      "price": 80,
+      "currency": "USD",
+      "quota": "180 000 кредитов / 30 дней; недельный лимит снят",
+      "tokens": "Коэффициенты не раскрыты",
+      "note": "Qwen + DeepSeek + GLM. Промоценник: $68. Это не подписка Qwen Chat.",
+      "refs": [
+        "qwen_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "MiniMax",
+      "name": "Token Plan Plus",
+      "price": 22,
+      "currency": "USD",
+      "quota": "Вычислительный пул; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "M3 / M2.7; номинал покупных кредитов не раскрывает включённый бюджет.",
+      "refs": [
+        "minimax_plan",
+        "minimax_intro"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "MiniMax",
+      "name": "Token Plan Max",
+      "price": 55,
+      "currency": "USD",
+      "quota": "Вычислительный пул; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "M3 / M2.7; номинал покупных кредитов не раскрывает включённый бюджет.",
+      "refs": [
+        "minimax_plan",
+        "minimax_intro"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "MiniMax",
+      "name": "Token Plan Ultra",
+      "price": 132,
+      "currency": "USD",
+      "quota": "Вычислительный пул; 5 ч + неделя",
+      "tokens": "Не раскрыты",
+      "note": "M3 / M2.7; номинал покупных кредитов не раскрывает включённый бюджет.",
+      "refs": [
+        "minimax_plan",
+        "minimax_intro"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kimi",
+      "name": "Andante",
+      "price": 49,
+      "currency": "CNY",
+      "quota": "Ориентир ≈30 Agent tasks / месяц",
+      "tokens": "Не раскрыты",
+      "note": "Региональная цена CNY; задачи — оценка, не фиксированное число запросов.",
+      "refs": [
+        "kimi_plan",
+        "kimi_pool"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kimi",
+      "name": "Moderato",
+      "price": 99,
+      "currency": "CNY",
+      "quota": "Ориентир ≈60 Agent tasks / месяц",
+      "tokens": "Не раскрыты",
+      "note": "Региональная цена CNY; задачи — оценка, не фиксированное число запросов.",
+      "refs": [
+        "kimi_plan",
+        "kimi_pool"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kimi",
+      "name": "Allegretto",
+      "price": 199,
+      "currency": "CNY",
+      "quota": "Ориентир ≈150 Agent tasks / месяц",
+      "tokens": "Не раскрыты",
+      "note": "Региональная цена CNY; задачи — оценка, не фиксированное число запросов.",
+      "refs": [
+        "kimi_plan",
+        "kimi_pool"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kimi",
+      "name": "Allegro",
+      "price": 699,
+      "currency": "CNY",
+      "quota": "Ориентир ≈360 Agent tasks / месяц",
+      "tokens": "Не раскрыты",
+      "note": "Региональная цена CNY; задачи — оценка, не фиксированное число запросов.",
+      "refs": [
+        "kimi_plan",
+        "kimi_pool"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "xAI / Grok",
+      "name": "SuperGrok",
+      "price": 30,
+      "currency": "USD",
+      "quota": "Повышенный лимит функций Grok",
+      "tokens": "Не раскрыты",
+      "note": "Модель в приложении может отличаться от тестируемого API.",
+      "refs": [
+        "grok_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "xAI / Grok",
+      "name": "SuperGrok Plus",
+      "price": 100,
+      "currency": "USD",
+      "quota": "Больше использования; токенный объём не опубликован",
+      "tokens": "Не раскрыты",
+      "note": "Прайс также перечисляет Lite / Heavy, но их цену здесь не восстанавливаем.",
+      "refs": [
+        "grok_plan"
+      ],
+      "kind": "lab",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Mistral",
+      "name": "Pro",
+      "price": 14.99,
+      "currency": "USD",
+      "quota": "Vibe + более высокие лимиты; $30 API credits / месяц",
+      "tokens": "API-часть — да; чат — нет",
+      "note": "API credits выделены отдельно; образовательный вариант имеет другие условия.",
+      "refs": [
+        "mistral_plan"
+      ],
+      "kind": "lab",
+      "clarity": "partial"
+    },
+    {
+      "provider": "DeepSeek",
+      "name": "Прямой API",
+      "price": null,
+      "currency": "USD",
+      "quota": "Оплата использованных токенов",
+      "tokens": "Да, но это не подписка",
+      "note": "Прямая платная подписка не подтверждена; есть в Alibaba Token Plan.",
+      "refs": [
+        "ds_api",
+        "qwen_plan"
+      ],
+      "kind": "api",
+      "clarity": "formula"
+    },
+    {
+      "provider": "GitHub Copilot",
+      "name": "Pro",
+      "price": 10,
+      "currency": "USD",
+      "quota": "1 000 base + 500 flex = 1 500 кредитов / месяц",
+      "tokens": "Считаются по модели",
+      "note": "1 credit = $0.01. Flex — переменная часть, не неизменная гарантия.",
+      "refs": [
+        "copilot_plan",
+        "copilot_bill"
+      ],
+      "kind": "platform",
+      "clarity": "formula"
+    },
+    {
+      "provider": "GitHub Copilot",
+      "name": "Pro+",
+      "price": 39,
+      "currency": "USD",
+      "quota": "3 900 base + 3 100 flex = 7 000 кредитов / месяц",
+      "tokens": "Считаются по модели",
+      "note": "1 credit = $0.01. Flex — переменная часть, не неизменная гарантия.",
+      "refs": [
+        "copilot_plan",
+        "copilot_bill"
+      ],
+      "kind": "platform",
+      "clarity": "formula"
+    },
+    {
+      "provider": "GitHub Copilot",
+      "name": "Max",
+      "price": 100,
+      "currency": "USD",
+      "quota": "10 000 base + 10 000 flex = 20 000 кредитов / месяц",
+      "tokens": "Считаются по модели",
+      "note": "1 credit = $0.01. Flex — переменная часть, не неизменная гарантия.",
+      "refs": [
+        "copilot_plan",
+        "copilot_bill"
+      ],
+      "kind": "platform",
+      "clarity": "formula"
+    },
+    {
+      "provider": "Cursor",
+      "name": "Pro",
+      "price": 20,
+      "currency": "USD",
+      "quota": "Отдельные пулы Cursor Models / Other Models",
+      "tokens": "Единый объём не раскрыт",
+      "note": "Выбор модели влияет на расход; превышение оплачивается дополнительно.",
+      "refs": [
+        "cursor"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Cursor",
+      "name": "Pro Plus",
+      "price": 60,
+      "currency": "USD",
+      "quota": "Отдельные пулы Cursor Models / Other Models",
+      "tokens": "Единый объём не раскрыт",
+      "note": "Выбор модели влияет на расход; превышение оплачивается дополнительно.",
+      "refs": [
+        "cursor"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Cursor",
+      "name": "Ultra",
+      "price": 200,
+      "currency": "USD",
+      "quota": "Отдельные пулы Cursor Models / Other Models",
+      "tokens": "Единый объём не раскрыт",
+      "note": "Выбор модели влияет на расход; превышение оплачивается дополнительно.",
+      "refs": [
+        "cursor"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kiro",
+      "name": "Pro",
+      "price": 20,
+      "currency": "USD",
+      "quota": "1 000 кредитов / месяц",
+      "tokens": "Не фиксированы",
+      "note": "Кредит — единица работы сервиса, не миллион токенов; доплата $0.04 / кредит.",
+      "refs": [
+        "kiro"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kiro",
+      "name": "Pro+",
+      "price": 40,
+      "currency": "USD",
+      "quota": "2 000 кредитов / месяц",
+      "tokens": "Не фиксированы",
+      "note": "Кредит — единица работы сервиса, не миллион токенов; доплата $0.04 / кредит.",
+      "refs": [
+        "kiro"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kiro",
+      "name": "Pro Max",
+      "price": 100,
+      "currency": "USD",
+      "quota": "5 000 кредитов / месяц",
+      "tokens": "Не фиксированы",
+      "note": "Кредит — единица работы сервиса, не миллион токенов; доплата $0.04 / кредит.",
+      "refs": [
+        "kiro"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    },
+    {
+      "provider": "Kiro",
+      "name": "Power",
+      "price": 200,
+      "currency": "USD",
+      "quota": "10 000 кредитов / месяц",
+      "tokens": "Не фиксированы",
+      "note": "Кредит — единица работы сервиса, не миллион токенов; доплата $0.04 / кредит.",
+      "refs": [
+        "kiro"
+      ],
+      "kind": "platform",
+      "clarity": "opaque"
+    }
+  ],
+  "models": [
+    {
+      "family": "OpenAI",
+      "name": "GPT-6 Astra",
+      "mode": "max",
+      "index": 53,
+      "cost": 3.26,
+      "refs": [
+        "aa_astra"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "OpenAI",
+      "name": "GPT-6.1 Sol",
+      "mode": "max",
+      "index": 52,
+      "cost": 0.72,
+      "refs": [
+        "aa_sol"
+      ],
+      "note": "Новое поколение рабочего семейства",
+      "tier": "junior"
+    },
+    {
+      "family": "OpenAI",
+      "name": "GPT-6 Luna",
+      "mode": "max",
+      "index": 37,
+      "cost": 0.07,
+      "refs": [
+        "aa"
+      ],
+      "note": "Бюджетная модель",
+      "tier": "junior"
+    },
+    {
+      "family": "Anthropic",
+      "name": "Claude Opus 5.5",
+      "mode": "max + default fallback",
+      "index": 58,
+      "cost": 5.98,
+      "refs": [
+        "aa_opus"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "Anthropic",
+      "name": "Claude Sonnet 5.5",
+      "mode": "max + default fallback",
+      "index": 56,
+      "cost": 7.6,
+      "refs": [
+        "aa_sonnet"
+      ],
+      "note": "Дешевле за токен, не за это тестовое задание",
+      "tier": "junior"
+    },
+    {
+      "family": "Anthropic",
+      "name": "Claude Fable 5.1",
+      "mode": "max + default fallback",
+      "index": 53,
+      "cost": 7.63,
+      "refs": [
+        "aa"
+      ],
+      "note": "Отдельная дорогая линейка",
+      "tier": "flagship"
+    },
+    {
+      "family": "Google",
+      "name": "Gemini 3.8 Flash",
+      "mode": "high",
+      "index": 41,
+      "cost": 1.24,
+      "refs": [
+        "aa_gem"
+      ],
+      "note": "Новее представленного Pro",
+      "tier": "junior"
+    },
+    {
+      "family": "Google",
+      "name": "Gemini 3.1 Pro Preview",
+      "mode": "режим страницы AA",
+      "index": 30,
+      "cost": 0.67,
+      "refs": [
+        "aa"
+      ],
+      "note": "Предыдущее поколение, не современный парный Pro",
+      "tier": "flagship"
+    },
+    {
+      "family": "Google",
+      "name": "Gemini 3.5 Flash-Lite",
+      "mode": "режим страницы AA",
+      "index": 22,
+      "cost": 0.12,
+      "refs": [
+        "aa"
+      ],
+      "note": "Бюджетная модель",
+      "tier": "junior"
+    },
+    {
+      "family": "Alibaba / Qwen",
+      "name": "Qwen3.8 Max 0902",
+      "mode": "режим страницы AA",
+      "index": 45,
+      "cost": 5.41,
+      "refs": [
+        "aa_qwen"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "Alibaba / Qwen",
+      "name": "Qwen3.8-Flash-Next",
+      "mode": "режим страницы AA",
+      "index": 40,
+      "cost": 0.37,
+      "refs": [
+        "aa_qwen_flash"
+      ],
+      "note": "Не приравниваем автоматически к алиасу Token Plan",
+      "tier": "junior"
+    },
+    {
+      "family": "Z.ai / GLM",
+      "name": "GLM-5.3",
+      "mode": "max",
+      "index": 45,
+      "cost": 2.01,
+      "refs": [
+        "aa_glm"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "Z.ai / GLM",
+      "name": "GLM-5.3-Flash",
+      "mode": "режим страницы AA",
+      "index": 42,
+      "cost": 0.25,
+      "refs": [
+        "aa"
+      ],
+      "note": "Младшая модель",
+      "tier": "junior"
+    },
+    {
+      "family": "DeepSeek",
+      "name": "DeepSeek V4 Pro 0813",
+      "mode": "max",
+      "index": 36,
+      "cost": 0.67,
+      "refs": [
+        "aa"
+      ],
+      "note": "Предыдущее поколение относительно V4.1",
+      "tier": "flagship"
+    },
+    {
+      "family": "DeepSeek",
+      "name": "DeepSeek V4.1 Flash",
+      "mode": "max",
+      "index": 39,
+      "cost": 0.27,
+      "refs": [
+        "aa_ds"
+      ],
+      "note": "Новее Pro 0813 — не чистое сравнение размера",
+      "tier": "junior"
+    },
+    {
+      "family": "MiniMax",
+      "name": "MiniMax M3",
+      "mode": "режим страницы AA",
+      "index": 29,
+      "cost": 0.51,
+      "refs": [
+        "aa_m3"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "MiniMax",
+      "name": "MiniMax M2.7",
+      "mode": "режим страницы AA",
+      "index": 23,
+      "cost": null,
+      "refs": [
+        "aa_m27"
+      ],
+      "note": "Предшественник; текущая стоимость AA не опубликована",
+      "tier": "junior"
+    },
+    {
+      "family": "Kimi",
+      "name": "Kimi K3",
+      "mode": "max",
+      "index": 44,
+      "cost": 2.0,
+      "refs": [
+        "aa_kimi"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "Kimi",
+      "name": "Kimi K2.7 Code",
+      "mode": "режим страницы AA",
+      "index": 26,
+      "cost": 0.54,
+      "refs": [
+        "aa"
+      ],
+      "note": "Предшественник и кодовая специализация, не K3-mini",
+      "tier": "junior"
+    },
+    {
+      "family": "xAI / Grok",
+      "name": "Grok 4.7",
+      "mode": "xhigh",
+      "index": 46,
+      "cost": 3.74,
+      "refs": [
+        "aa_grok"
+      ],
+      "note": "",
+      "tier": "flagship"
+    },
+    {
+      "family": "xAI / Grok",
+      "name": "Grok 4.7",
+      "mode": "high",
+      "index": 46,
+      "cost": 2.73,
+      "refs": [
+        "aa"
+      ],
+      "note": "Та же модель, более экономный режим",
+      "tier": "mode"
+    },
+    {
+      "family": "Mistral",
+      "name": "Mistral Medium 3.5",
+      "mode": "режим страницы AA",
+      "index": 14,
+      "cost": 0.5,
+      "refs": [
+        "aa_mistral"
+      ],
+      "note": "Не является измерением качества агента Vibe",
+      "tier": "flagship"
+    },
+    {
+      "family": "Mistral",
+      "name": "Mistral Small 4",
+      "mode": "режим страницы AA",
+      "index": 11,
+      "cost": 0.02,
+      "refs": [
+        "aa"
+      ],
+      "note": "Младшая модель",
+      "tier": "junior"
+    },
+    {
+      "family": "Xiaomi / MiMo",
+      "name": "MiMo-V2.6-Pro",
+      "mode": "режим страницы AA",
+      "index": 46,
+      "cost": 0.13,
+      "refs": [
+        "aa_mimo"
+      ],
+      "note": "Цена подписки не подтверждена; контроль качества",
+      "tier": "flagship"
+    },
+    {
+      "family": "Xiaomi / MiMo",
+      "name": "MiMo-V2.6-Flash",
+      "mode": "режим страницы AA",
+      "index": 38,
+      "cost": 0.06,
+      "refs": [
+        "aa"
+      ],
+      "note": "Цена подписки не подтверждена",
+      "tier": "junior"
+    },
+    {
+      "family": "Meta",
+      "name": "Muse Spark 1.3",
+      "mode": "max",
+      "index": 48,
+      "cost": 1.6,
+      "refs": [
+        "aa"
+      ],
+      "note": "Платные уровни объявлены; сопоставимая цена не подтверждена",
+      "tier": "flagship"
+    }
+  ],
+  "api": [
+    {
+      "name": "GPT-6 Astra · Standard",
+      "input": 10,
+      "output": 50,
+      "cache": 1,
+      "refs": [
+        "oai_api"
+      ],
+      "note": "Первая ступень контекста",
+      "provenance": "vendor",
+      "blend_80_20": 18.0,
+      "million_tokens_for_20": 1.111111
+    },
+    {
+      "name": "GPT-6 Astra · Ultrafast",
+      "input": 60,
+      "output": 300,
+      "cache": 6,
+      "refs": [
+        "oai_api"
+      ],
+      "note": "Это API-ставки, не множитель подписки",
+      "provenance": "vendor",
+      "blend_80_20": 108.0,
+      "million_tokens_for_20": 0.185185
+    },
+    {
+      "name": "GPT-6.1 Sol",
+      "input": 2,
+      "output": 10,
+      "cache": 0.1,
+      "refs": [
+        "oai_api"
+      ],
+      "note": "Первая ступень контекста",
+      "provenance": "vendor",
+      "blend_80_20": 3.6,
+      "million_tokens_for_20": 5.555556
+    },
+    {
+      "name": "GPT-6 Luna",
+      "input": 0.1,
+      "output": 0.5,
+      "cache": 0.01,
+      "refs": [
+        "oai_api"
+      ],
+      "note": "Первая ступень контекста",
+      "provenance": "vendor",
+      "blend_80_20": 0.18,
+      "million_tokens_for_20": 111.111111
+    },
+    {
+      "name": "Claude Fable 5.1",
+      "input": 10,
+      "output": 50,
+      "cache": 0.25,
+      "refs": [
+        "claude_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 18.0,
+      "million_tokens_for_20": 1.111111
+    },
+    {
+      "name": "Claude Opus 5.5",
+      "input": 4,
+      "output": 20,
+      "cache": 0.2,
+      "refs": [
+        "claude_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 7.2,
+      "million_tokens_for_20": 2.777778
+    },
+    {
+      "name": "Claude Sonnet 5.5",
+      "input": 2,
+      "output": 10,
+      "cache": 0.2,
+      "refs": [
+        "claude_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 3.6,
+      "million_tokens_for_20": 5.555556
+    },
+    {
+      "name": "Claude Haiku 4.5",
+      "input": 1,
+      "output": 5,
+      "cache": 0.1,
+      "refs": [
+        "claude_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 1.8,
+      "million_tokens_for_20": 11.111111
+    },
+    {
+      "name": "Gemini 3.8 Flash",
+      "input": 0.75,
+      "output": 3.75,
+      "cache": 0.075,
+      "refs": [
+        "gem_api"
+      ],
+      "note": "Временная цена до 31.12.2026",
+      "provenance": "vendor",
+      "blend_80_20": 1.35,
+      "million_tokens_for_20": 14.814815
+    },
+    {
+      "name": "Gemini 3.1 Pro Preview",
+      "input": 2,
+      "output": 12,
+      "cache": 0.2,
+      "refs": [
+        "gem_api"
+      ],
+      "note": "Запросы ≤200 тыс. токенов",
+      "provenance": "vendor",
+      "blend_80_20": 4.0,
+      "million_tokens_for_20": 5.0
+    },
+    {
+      "name": "Gemini 3.5 Flash-Lite",
+      "input": 0.3,
+      "output": 2.5,
+      "cache": 0.03,
+      "refs": [
+        "gem_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 0.74,
+      "million_tokens_for_20": 27.027027
+    },
+    {
+      "name": "Qwen3.8 Max",
+      "input": 2,
+      "output": 6,
+      "cache": null,
+      "refs": [
+        "qwen_api"
+      ],
+      "note": "International / Singapore",
+      "provenance": "vendor",
+      "blend_80_20": 2.8,
+      "million_tokens_for_20": 7.142857
+    },
+    {
+      "name": "Qwen3.8 Flash",
+      "input": 0.15,
+      "output": 0.47,
+      "cache": null,
+      "refs": [
+        "qwen_api"
+      ],
+      "note": "International / Singapore; точный алиас см. примечание",
+      "provenance": "vendor",
+      "blend_80_20": 0.214,
+      "million_tokens_for_20": 93.457944
+    },
+    {
+      "name": "GLM-5.3",
+      "input": 1.4,
+      "output": 4.4,
+      "cache": 0.26,
+      "refs": [
+        "glm_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 2.0,
+      "million_tokens_for_20": 10.0
+    },
+    {
+      "name": "GLM-5.3-Flash",
+      "input": 0.15,
+      "output": 0.5,
+      "cache": 0.03,
+      "refs": [
+        "glm_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 0.22,
+      "million_tokens_for_20": 90.909091
+    },
+    {
+      "name": "DeepSeek V4 Pro 0813",
+      "input": 1.32,
+      "output": 3.96,
+      "cache": 0.044,
+      "refs": [
+        "ds_api"
+      ],
+      "note": "Peak, без временной скидки",
+      "provenance": "vendor",
+      "blend_80_20": 1.848,
+      "million_tokens_for_20": 10.822511
+    },
+    {
+      "name": "DeepSeek V4.1 Flash",
+      "input": 0.3,
+      "output": 1.2,
+      "cache": 0.006,
+      "refs": [
+        "ds_api"
+      ],
+      "note": "Peak, без временной скидки",
+      "provenance": "vendor",
+      "blend_80_20": 0.48,
+      "million_tokens_for_20": 41.666667
+    },
+    {
+      "name": "MiniMax M3",
+      "input": 0.3,
+      "output": 1.2,
+      "cache": 0.06,
+      "refs": [
+        "minimax_api"
+      ],
+      "note": "Контекст ≤512 тыс. токенов",
+      "provenance": "vendor",
+      "blend_80_20": 0.48,
+      "million_tokens_for_20": 41.666667
+    },
+    {
+      "name": "MiniMax M2.7",
+      "input": 0.3,
+      "output": 1.2,
+      "cache": 0.06,
+      "refs": [
+        "minimax_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 0.48,
+      "million_tokens_for_20": 41.666667
+    },
+    {
+      "name": "Kimi K3",
+      "input": 3,
+      "output": 15,
+      "cache": 0.3,
+      "refs": [
+        "aa_kimi"
+      ],
+      "note": "Ценовой ориентир AA, не проверенный нами checkout Kimi",
+      "provenance": "evaluator",
+      "blend_80_20": 5.4,
+      "million_tokens_for_20": 3.703704
+    },
+    {
+      "name": "Grok 4.7",
+      "input": 2,
+      "output": 6,
+      "cache": null,
+      "refs": [
+        "grok_api"
+      ],
+      "note": "",
+      "provenance": "vendor",
+      "blend_80_20": 2.8,
+      "million_tokens_for_20": 7.142857
+    },
+    {
+      "name": "Mistral Large",
+      "input": 0.5,
+      "output": 1.5,
+      "cache": null,
+      "refs": [
+        "mistral_plan"
+      ],
+      "note": "Модель из примера Mistral; не Medium 3.5",
+      "provenance": "vendor",
+      "blend_80_20": 0.7,
+      "million_tokens_for_20": 28.571429
+    }
+  ],
+  "gdpval": [
+    [
+      "Claude Opus 5.5",
+      "max + fallback",
+      1846,
+      23
+    ],
+    [
+      "Claude Sonnet 5.5",
+      "max + fallback",
+      1844,
+      24
+    ],
+    [
+      "Claude Fable 5.1",
+      "max + fallback",
+      1735,
+      25
+    ],
+    [
+      "Grok 4.7",
+      "xhigh",
+      1695,
+      20
+    ],
+    [
+      "MiMo-V2.6-Pro",
+      "стандарт страницы",
+      1678,
+      25
+    ],
+    [
+      "Muse Spark 1.3",
+      "max",
+      1674,
+      24
+    ],
+    [
+      "Qwen3.8 Max 0902",
+      "стандарт страницы",
+      1663,
+      24
+    ],
+    [
+      "GLM-5.3",
+      "max",
+      1644,
+      23
+    ],
+    [
+      "DeepSeek V4 Pro 0813",
+      "max",
+      1441,
+      25
+    ]
+  ],
+  "sources": {
+    "oai_tiers": {
+      "id": 1,
+      "title": "OpenAI — About ChatGPT Pro tiers",
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "supports": "Pro $100/$200/$500, переходный период до 29 октября, выбор Ultrafast.",
+      "checked": "2026-09-29"
+    },
+    "oai_plus": {
+      "id": 2,
+      "title": "OpenAI — ChatGPT Plus",
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "supports": "Базовая цена Plus и отдельная оплата API.",
+      "checked": "2026-09-29"
+    },
+    "oai_recap": {
+      "id": 3,
+      "title": "OpenAI — DevDay 2026 recap",
+      "url": "https://openai.com/index/devday-2026-recap/",
+      "supports": "Pro 500 = 25× Plus; GPT-6.1 Sol; заявленная скорость Ultrafast.",
+      "checked": "2026-09-29"
+    },
+    "oai_usage": {
+      "id": 4,
+      "title": "OpenAI — GPT-6 Astra in Work and Codex",
+      "url": "https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex",
+      "supports": "Общая квота Work/Codex, ограничения по времени и факторы расхода; старая таблица 5×/20×.",
+      "checked": "2026-09-29"
+    },
+    "oai_api": {
+      "id": 5,
+      "title": "OpenAI — API pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "supports": "Standard, Fast, Ultrafast; ввод, кэш и вывод; длинный контекст.",
+      "checked": "2026-09-29"
+    },
+    "claude_plans": {
+      "id": 6,
+      "title": "Anthropic — Claude pricing",
+      "url": "https://claude.com/pricing",
+      "supports": "Pro, Max и относительные лимиты.",
+      "checked": "2026-09-29"
+    },
+    "claude_max": {
+      "id": 7,
+      "title": "Anthropic — What is the Max plan?",
+      "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "supports": "Max 5× и 20×: стоимость и ограниченное использование.",
+      "checked": "2026-09-29"
+    },
+    "claude_api": {
+      "id": 8,
+      "title": "Anthropic — API pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "supports": "Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5; кэш и Fast mode.",
+      "checked": "2026-09-29"
+    },
+    "gem_plans": {
+      "id": 9,
+      "title": "Google — Gemini subscriptions",
+      "url": "https://gemini.google/subscriptions/",
+      "supports": "AI Plus, Pro, Ultra 5×/20×; цены и база сравнения.",
+      "checked": "2026-09-29"
+    },
+    "gem_limits": {
+      "id": 10,
+      "title": "Google — Gemini limits and upgrades",
+      "url": "https://support.google.com/gemini/answer/16275805",
+      "supports": "Вычислительные ограничения, окна 5 часов и неделя; контекст не равен квоте.",
+      "checked": "2026-09-29"
+    },
+    "gem_api": {
+      "id": 11,
+      "title": "Google — Gemini API pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "supports": "Gemini 3.8 Flash, 3.1 Pro Preview, 3.5 Flash-Lite; акция до конца 2026 года.",
+      "checked": "2026-09-29"
+    },
+    "glm_plans": {
+      "id": 12,
+      "title": "Z.ai — ZCode / GLM Coding Plan",
+      "url": "https://zcode.z.ai/en",
+      "supports": "Витринные цены Lite, Pro, Max и промоценники.",
+      "checked": "2026-09-29"
+    },
+    "glm_credits": {
+      "id": 13,
+      "title": "Z.ai — Coding Plan overview",
+      "url": "https://docs.z.ai/devpack/overview",
+      "supports": "Квоты 5 часов / неделя, формула кредитов, коэффициенты моделей, off-peak.",
+      "checked": "2026-09-29"
+    },
+    "glm_faq": {
+      "id": 14,
+      "title": "Z.ai — Coding Plan FAQ",
+      "url": "https://docs.z.ai/devpack/faq",
+      "supports": "Разрешённые инструменты, отдельный API и ограничения использования.",
+      "checked": "2026-09-29"
+    },
+    "glm_api": {
+      "id": 15,
+      "title": "Z.ai — Model pricing",
+      "url": "https://docs.z.ai/guides/overview/pricing",
+      "supports": "API GLM-5.3 и GLM-5.3-Flash.",
+      "checked": "2026-09-29"
+    },
+    "qwen_plan": {
+      "id": 16,
+      "title": "Alibaba Cloud — Token Plan personal overview",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-overview",
+      "supports": "Четыре тарифа, месячные кредиты, модельный каталог, временные скидки и ограничения.",
+      "checked": "2026-09-29"
+    },
+    "qwen_api": {
+      "id": 17,
+      "title": "Alibaba Cloud — Model pricing",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "supports": "Международное развёртывание Singapore: Qwen3.8 Max и Flash.",
+      "checked": "2026-09-29"
+    },
+    "minimax_plan": {
+      "id": 18,
+      "title": "MiniMax — Token Plan pricing",
+      "url": "https://platform.minimax.io/docs/guides/pricing-token-plan",
+      "supports": "Plus, Max, Ultra; окна использования и отдельно покупаемые кредиты.",
+      "checked": "2026-09-29"
+    },
+    "minimax_intro": {
+      "id": 19,
+      "title": "MiniMax — Token Plan introduction",
+      "url": "https://platform.minimax.io/docs/token-plan/intro",
+      "supports": "Состав Token Plan и поддержка инструментов.",
+      "checked": "2026-09-29"
+    },
+    "minimax_api": {
+      "id": 20,
+      "title": "MiniMax — Pay-as-you-go pricing",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "supports": "M3, M3 Priority, M2.7: токенные цены и длинный контекст.",
+      "checked": "2026-09-29"
+    },
+    "ds_api": {
+      "id": 21,
+      "title": "DeepSeek — Models & pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "supports": "V4.1 Flash и V4 Pro 0813; peak/off-peak и кэш.",
+      "checked": "2026-09-29"
+    },
+    "kimi_plan": {
+      "id": 22,
+      "title": "Kimi — Membership pricing",
+      "url": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "supports": "Региональная витрина в CNY; четыре тарифа и ориентиры Agent tasks.",
+      "checked": "2026-09-29"
+    },
+    "kimi_pool": {
+      "id": 23,
+      "title": "Kimi — Membership update rules",
+      "url": "https://www.kimi.com/help/membership/membership-update-rules",
+      "supports": "Общий пул Agent / Code / Work / Claw, месячный сброс и окна Code.",
+      "checked": "2026-09-29"
+    },
+    "kimi_speed": {
+      "id": 24,
+      "title": "Kimi — Code membership guide",
+      "url": "https://www.kimi.com/en/help/kimi-code/membership-guide",
+      "supports": "Алиас kimi-for-coding, High Speed, множитель расхода и границы применения.",
+      "checked": "2026-09-29"
+    },
+    "grok_plan": {
+      "id": 25,
+      "title": "xAI — Pricing",
+      "url": "https://x.ai/pricing",
+      "supports": "SuperGrok и SuperGrok Plus; публично видимые тарифы.",
+      "checked": "2026-09-29"
+    },
+    "grok_api": {
+      "id": 26,
+      "title": "xAI — Models",
+      "url": "https://docs.x.ai/developers/models",
+      "supports": "Grok 4.7: цены API.",
+      "checked": "2026-09-29"
+    },
+    "mistral_plan": {
+      "id": 27,
+      "title": "Mistral — Pricing",
+      "url": "https://mistral.ai/pricing/",
+      "supports": "Pro, Vibe и API credits; справочный API-прайс Large.",
+      "checked": "2026-09-29"
+    },
+    "copilot_plan": {
+      "id": 28,
+      "title": "GitHub — Plans for Copilot",
+      "url": "https://docs.github.com/en/copilot/get-started/plans",
+      "supports": "Pro, Pro+, Max: цена, базовые и flex-кредиты.",
+      "checked": "2026-09-29"
+    },
+    "copilot_bill": {
+      "id": 29,
+      "title": "GitHub — Usage-based billing for individuals",
+      "url": "https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing",
+      "supports": "1 credit = $0.01; flex меняется, правила списания и сброса.",
+      "checked": "2026-09-29"
+    },
+    "copilot_rates": {
+      "id": 30,
+      "title": "GitHub — Models and pricing for Copilot",
+      "url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+      "supports": "Ставки моделей внутри Copilot, а не предположение по чужому API.",
+      "checked": "2026-09-29"
+    },
+    "cursor": {
+      "id": 31,
+      "title": "Cursor — Models & pricing",
+      "url": "https://cursor.com/docs/models-and-pricing",
+      "supports": "Pro $20, Pro Plus $60, Ultra $200, модельные пулы и доплата.",
+      "checked": "2026-09-29"
+    },
+    "kiro": {
+      "id": 32,
+      "title": "Kiro — Pricing",
+      "url": "https://kiro.dev/pricing/",
+      "supports": "Четыре индивидуальных тарифа и кредитные лимиты.",
+      "checked": "2026-09-29"
+    },
+    "aa": {
+      "id": 33,
+      "title": "Artificial Analysis — LLM leaderboard",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "supports": "Срез Intelligence Index v4.3.2 и Cost per Intelligence Index task.",
+      "checked": "2026-09-29"
+    },
+    "aa_method": {
+      "id": 34,
+      "title": "Artificial Analysis — Intelligence benchmarking",
+      "url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+      "supports": "Методика, состав тестов, учёт токенов и ограничения сопоставления.",
+      "checked": "2026-09-29"
+    },
+    "aa_astra": {
+      "id": 35,
+      "title": "Artificial Analysis — GPT-6 Astra",
+      "url": "https://artificialanalysis.ai/models/gpt-6-astra",
+      "supports": "Astra max: индекс, стоимость тестового задания.",
+      "checked": "2026-09-29"
+    },
+    "aa_sol": {
+      "id": 36,
+      "title": "Artificial Analysis — GPT-6.1 Sol",
+      "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+      "supports": "Sol max: индекс, стоимость, параметры тестирования.",
+      "checked": "2026-09-29"
+    },
+    "aa_opus": {
+      "id": 37,
+      "title": "Artificial Analysis — Claude Opus 5.5",
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+      "supports": "Opus max with fallback: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_sonnet": {
+      "id": 38,
+      "title": "Artificial Analysis — Claude Sonnet 5.5",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+      "supports": "Sonnet max with fallback: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_qwen": {
+      "id": 39,
+      "title": "Artificial Analysis — Qwen3.8 Max",
+      "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+      "supports": "Max 0902: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_qwen_flash": {
+      "id": 40,
+      "title": "Artificial Analysis — Qwen3.8-Flash-Next",
+      "url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+      "supports": "Открытая младшая модель: индекс, стоимость и API-ориентир.",
+      "checked": "2026-09-29"
+    },
+    "aa_glm": {
+      "id": 41,
+      "title": "Artificial Analysis — GLM-5.3",
+      "url": "https://artificialanalysis.ai/models/glm-5-3",
+      "supports": "GLM-5.3 max: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_ds": {
+      "id": 42,
+      "title": "Artificial Analysis — DeepSeek V4.1 Flash",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "supports": "V4.1 Flash max: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_gem": {
+      "id": 43,
+      "title": "Artificial Analysis — Gemini 3.8 Flash",
+      "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+      "supports": "Flash high: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_kimi": {
+      "id": 44,
+      "title": "Artificial Analysis — Kimi K3",
+      "url": "https://artificialanalysis.ai/models/kimi-k3",
+      "supports": "K3 max: индекс, стоимость; отдельно помеченный ценовой ориентир API.",
+      "checked": "2026-09-29"
+    },
+    "aa_m3": {
+      "id": 45,
+      "title": "Artificial Analysis — MiniMax M3",
+      "url": "https://artificialanalysis.ai/models/minimax-m3",
+      "supports": "M3: индекс и стоимость.",
+      "checked": "2026-09-29"
+    },
+    "aa_m27": {
+      "id": 46,
+      "title": "Artificial Analysis — MiniMax M2.7",
+      "url": "https://artificialanalysis.ai/models/minimax-m2-7",
+      "supports": "Предыдущее поколение; индекс, без актуальной стоимости тестового задания.",
+      "checked": "2026-09-29"
+    },
+    "tb": {
+      "id": 47,
+      "title": "Artificial Analysis — Terminal-Bench 4.0",
+      "url": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+      "supports": "Агент в терминале: 66 задач, pass@1; результаты Opus / Sonnet.",
+      "checked": "2026-09-29"
+    },
+    "gdp": {
+      "id": 48,
+      "title": "Artificial Analysis — GDPval-AA",
+      "url": "https://artificialanalysis.ai/evaluations/gdpval-aa",
+      "supports": "Рабочие задания: Elo и доверительные интервалы v2.1.",
+      "checked": "2026-09-29"
+    },
+    "omni": {
+      "id": 49,
+      "title": "Artificial Analysis — Omniscience",
+      "url": "https://artificialanalysis.ai/evaluations/omniscience",
+      "supports": "Надёжность знаний: правильные ответы, ошибки и отказ от ответа.",
+      "checked": "2026-09-29"
+    },
+    "meta": {
+      "id": 50,
+      "title": "Meta — Introducing Muse",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "supports": "Объявлены бесплатные и платные варианты; не использовано как подтверждение цены.",
+      "checked": "2026-09-29"
+    },
+    "mimo": {
+      "id": 51,
+      "title": "Xiaomi — MiMo platform",
+      "url": "https://platform.xiaomimimo.com/",
+      "supports": "Платформа MiMo; токенная квота и региональная цена не извлечены из открытой витрины.",
+      "checked": "2026-09-29"
+    },
+    "aa_mistral": {
+      "id": 52,
+      "title": "Artificial Analysis — Mistral Medium 3.5",
+      "url": "https://artificialanalysis.ai/models/mistral-medium-3-5",
+      "supports": "Индекс и стоимость Medium 3.5.",
+      "checked": "2026-09-29"
+    },
+    "aa_mimo": {
+      "id": 53,
+      "title": "Artificial Analysis — MiMo-V2.6-Pro",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "supports": "Индекс и стоимость MiMo Pro.",
+      "checked": "2026-09-29"
+    },
+    "aa_grok": {
+      "id": 54,
+      "title": "Artificial Analysis — Grok 4.7",
+      "url": "https://artificialanalysis.ai/models/grok-4-7",
+      "supports": "Grok xhigh: индекс и стоимость.",
+      "checked": "2026-09-29"
+    }
+  }
+}
